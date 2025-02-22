@@ -14,8 +14,14 @@ def about (request):
 
 def blog (request):
     post = Post.objects.all()
-    return render(request, 'galeria/blog', {'conteudo': post})
+    return render(request, 'galeria/blog.html', {'conteudo': post})
 
 def post (request, post_id):
     post = get_object_or_404(post, pk=post_id)
-    return render(request, 'galeria/post', {'post': post})
+    return render(request, 'galeria/post.html', {'post': post})
+
+def store (request):
+    return render(request, 'galeria/store.html')
+
+def login (request):
+    return render(request, 'galeria/store.hmtl')
