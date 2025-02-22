@@ -33,17 +33,17 @@
         </section>
         <section class="conteudo">
         {% if conteudo %}
-        {% for post in conteudo-blog %}
-        <a href="{% url 'post' post.id %}">
+        {% for post in post_blog %}
                 <article class="conteudo-blog">
-                    <div class="apresentacao-chamada">
-                        <h2 class="titulo-blog">{{post.titulo}}</h2>
-                        <span class="span-blog">{{post.descricao}}</span>
-                    </div>
-                    <img src="{% static 'assets/' %}{{post.foto}}" alt="{{post.legenda}}" class="img-blog">
+                    <a href="{% url 'post' post.id %}" class="post_blog">
+                        <div class="apresentacao-chamada">
+                            <h2 class="titulo-blog">{{post.titulo}}</h2>
+                            <span class="span-blog">{{post.descricao}}</span>
+                        </div>
+                        <img src="{% static 'assets/' %}{{post.foto}}" alt="{{post.legenda}}" class="img-blog">
+                    </a>    
                 </article>
             </section>
-        </a>
         {% endfor %}   
         {% else %}
         {% endif %} 

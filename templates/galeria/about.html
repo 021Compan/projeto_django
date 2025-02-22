@@ -28,8 +28,8 @@
                     <p>Nossa missão é mostrar que a santidade é possível. Na meditação do Santo Rosário, encontramos o caminho que nos leva a Deus.</p>
                 </section>
                 <section class="conteudo">
-                    {% for membro in nossa-equipe %}
-                    <article class="nossa-equipe">
+                    {% for membro in card %}
+                    <article class="nossa-equipe card">
                         <h2 class="h2-nossa-equipe">Nossa equipe</h2>
                         <div class="equipe">
                             <img src="{% static 'assets/' %}{{membro.foto}}" alt="{{membro.nome}}" class="img-membro">
@@ -49,8 +49,8 @@
                     </section>
                     {% endfor %}
                     {% if chamada %}
-                    {% for produto in chamada-loja %}
-                    <article class="chamada-loja">
+                    {% for produto in chamada_loja %}
+                    <article class="chamada-loja chamada_loja">
                         <h2 class="h2-loja">Conheça nossa loja</h2>
                         <div class="chamada-produtos">
                             <img src="{% static 'assets/' %}{{produto.foto}}" alt="{{produto.nome}}" class="img-produto">
@@ -66,3 +66,4 @@
             </section>
         </main>
 {% endblock %}
+>>>>>>> bd398cebbc144fca01bf1b596a893a75d2f18b46

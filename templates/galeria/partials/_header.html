@@ -1,3 +1,4 @@
+{% extends 'galeria/base.html' %}
 {% load static %}
 <header class="header-mobile">
     <div id="menu">
@@ -8,10 +9,10 @@
         </div>
         <nav class="nav" id="nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="store.html" class="store">Loja</a></li>
-            <li><a href="login.html">Conta</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'store' %}" class="store">Loja</a></li>
+            <li><a href="{% url 'login' %}">Conta</a></li>
           </ul>
         </nav> 
       </div>
@@ -26,9 +27,9 @@
         <img src="{% static 'assets/terço-icon.png' %}" alt="Logo Terço Jovem" class="img-logo">
     </div>
     <nav class="cabecalho" aria-label="Main Navigation">
-        <a href="index.html" class="nav-desktop"><span>Home</span></a>
-        <a href="blog.html" class="nav-desktop"><span>Blog</span></a>
-        <a href="store.html" class="nav-desktop store"><span>Loja</span></a>
-        <a href="login.html" class="nav-desktop"><span>Login</span></a>
+        <a href="{% url 'home' %}" class="nav-desktop"><span>Home</span></a>
+        <a href="{% url 'blog' %}" class="nav-desktop"><span>Blog</span></a>
+        <a href="{% url 'store' %}" class="nav-desktop store"><span>Loja</span></a>
+        <a href="{% url 'login' %}" class="nav-desktop"><span>Login</span></a>
     </nav>
 </header>
