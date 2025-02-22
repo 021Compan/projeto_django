@@ -1,0 +1,91 @@
+.hero, .hero-poust-selecionado {
+    background: url(../img/hero.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);   
+}
+
+.versiculo-do-dia {
+    background-color: #101F3E;
+    padding: 2rem 5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.hr-versiculo {
+    border: 1px solid #ffffff;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.h1-versiculo {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+} 
+
+.apresentacao {
+    margin: 15rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.video-chamada {
+    width: 90vh;
+}
+
+.apresentacao-chamada {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.comeco {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5); 
+}
+
+.span-terco {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+
+
+.chamada-blog-span {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 1rem 1rem 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5); 
+}
+
+.chamada-blog {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
