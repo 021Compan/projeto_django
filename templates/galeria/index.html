@@ -1,0 +1,48 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <section class="hero">
+            <img src="{% static '/assets' %}/{{hero.foto}}" alt="">
+            <h1>TERÇO JOVEM <br> <hr> <br> pelo mundo inteiro. Espalhai o evangelho a toda criatura</h1>
+        </section>
+        
+        <section class="versiculo-do-dia">
+            <h2 class="h1-versiculo">Versículo do Dia</h2> 
+            <br> 
+            <span>xxxxxxxx</span> 
+            <br> 
+            <hr class="hr-versiculo"> 
+            <br> 
+            <span>xxxxxxxx</span> 
+        </section>
+        
+        <section class="conteudo">
+            <article class="apresentacao">
+                <div class="apresentacao-chamada">
+                    <h2 class="comeco">Tudo que é bom tem um começo</h2>
+                    <span class="span-terco">O Terço Jovem teve origem em 2019...</span>
+                    <a href="{% url 'about' %}" class="botao">Saiba mais</a>
+                </div>
+                <video alt="Trailer" class="video-chamada" controls>
+                    <source src="{% static 'assets/Trailer-do-Terço-Jovem.mp4' %}" type="video/mp4">
+                </video>
+            </article>
+            {% if chamada %}
+            {% for post in chamada %}
+            <article class="chamada">
+                <a href="{% url 'post' %}">
+                    <img src="{% static 'assets/' %}{{post.foto}}" alt="{{post.titulo}}" class="img-chamada">
+                        <span class="chamada-blog-span">{{post.legenda}}</span>
+                    <button class="botao">Saiba mais</button>
+                </a>
+            </article>
+            {% endfor %}   
+            {% else %}
+            {% endif %}     
+            <article class="carrossel">
+                <!-- Conteúdo do carrossel -->
+            </article>
+        </section>
+    </main>
+{% endblock %}

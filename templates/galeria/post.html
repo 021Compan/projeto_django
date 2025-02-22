@@ -1,0 +1,13 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <section class="hero-poust-selecionado">
+            <img src="{% static 'assets/' %}{{post_foto}}" alt="Imagem do post" class="hero-image">
+        </section>
+        <section class="apresentacao-poust conteudo">
+            <h1 class="titulo-poust">{{post.nome}}</h1>
+            <p class="conteudo-poust">{{post.descricao}}</p>
+        </section>
+    </main>
+{% endblock %}

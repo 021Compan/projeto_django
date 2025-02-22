@@ -1,0 +1,34 @@
+{% load static %}
+<header class="header-mobile">
+    <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()" aria-label="Menu">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav" aria-label="Main Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="store.html" class="store">Loja</a></li>
+            <li><a href="login.html">Conta</a></li>
+          </ul>
+        </nav> 
+      </div>
+      <div class="menu-bg" id="menu-bg"></div>
+    </div>
+    <div>
+        <img src="{% static 'assets/terço-icon.png' %}" alt="Logo Terço Jovem" class="img-logo">
+    </div>
+</header>
+<header class="header-desktop"> 
+    <div class="logo">
+        <img src="{% static 'assets/terço-icon.png' %}" alt="Logo Terço Jovem" class="img-logo">
+    </div>
+    <nav class="cabecalho" aria-label="Main Navigation">
+        <a href="index.html" class="nav-desktop"><span>Home</span></a>
+        <a href="blog.html" class="nav-desktop"><span>Blog</span></a>
+        <a href="store.html" class="nav-desktop store"><span>Loja</span></a>
+        <a href="login.html" class="nav-desktop"><span>Login</span></a>
+    </nav>
+</header>

@@ -1,0 +1,69 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <section class="hero-blog">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero-blog-text">
+                            <h1>Post 1</h1>
+                            <p class="hero-span-blog">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-blog-text">
+                            <h1>Post 2</h1>
+                            <p class="hero-span-blog">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-blog-text">
+                            <h1>Post 3</h1>
+                            <p class="hero-span-blog">It has survived not only five centuries, but also the leap into electronic typesetting...</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        <section class="conteudo">
+        {% if conteudo %}
+        {% for post in conteudo-blog %}
+        <a href="{% url 'post' post.id %}">
+                <article class="conteudo-blog">
+                    <div class="apresentacao-chamada">
+                        <h2 class="titulo-blog">{{post.titulo}}</h2>
+                        <span class="span-blog">{{post.descricao}}</span>
+                    </div>
+                    <img src="{% static 'assets/' %}{{post.foto}}" alt="{{post.legenda}}" class="img-blog">
+                </article>
+            </section>
+        </a>
+        {% endfor %}   
+        {% else %}
+        {% endif %} 
+    </main>  
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000, // Tempo em milissegundos entre cada slide
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+{% endblock %}
