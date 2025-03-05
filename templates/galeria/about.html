@@ -6,7 +6,7 @@
                 <div class="swiper-wrapper">
                     {% for hero_membro in pessoa01 %}
                     <div class="swiper-slide pessoa01">
-                        <img src="{% static 'assets/' %}{{hero_membro.foto}}" alt="{{hero_membro.nome}}">
+                        <img src="{{ hero_membro.foto.url }}" alt="{{hero_membro.nome}}">
                         <div class="info-membro">
                             <div class="nome-membro"><h2>{{hero_membro.nome}}</h2></div>
                             <div class="descricao-membro">{{hero_membro.descricao}}</div>
@@ -32,7 +32,7 @@
                     <article class="nossa-equipe card">
                         <h2 class="h2-nossa-equipe">Nossa equipe</h2>
                         <div class="equipe">
-                            <img src="{% static 'assets/' %}{{membro.foto}}" alt="{{membro.nome}}" class="img-membro">
+                            <img src="{{ membro.foto.url }}" alt="{{membro.nome}}" class="img-membro">
                             <h3 class="nome-membro">{{membro.nome}}</h3>
                             <p class="descricao-membro">{{membro.descricao}}</p>
                         </div>
@@ -43,7 +43,7 @@
                         {% for evento in evento %}
                             <article class="evento">
                                 <a class="eventos" href="#">
-                                    <img src="{% static 'assets/' %}{{evento.foto}}" alt="{{evento.nome}}" class="img-evento">
+                                    <img src="{{ evento.foto.url }}" alt="{{evento.nome}}" class="img-evento">
                                     <h3 class="nome-evento">{{evento.nome}}</h3>
                                 </a>
                     </section>
@@ -53,7 +53,7 @@
                     <article class="chamada-loja chamada_loja">
                         <h2 class="h2-loja">Conheça nossa loja</h2>
                         <div class="chamada-produtos">
-                            <img src="{% static 'assets/' %}{{produto.foto}}" alt="{{produto.nome}}" class="img-produto">
+                            <img src="{{ produto.foto.url }}" alt="{{produto.nome}}" class="img-produto">
                             <h3 class="nome-produto">{{produto.nome}}</h3>
                             <p class="descricao-produto">{{prduto.legenda}}</p>
                         </div>
@@ -66,4 +66,4 @@
             </section>
         </main>
 {% endblock %}
->>>>>>> bd398cebbc144fca01bf1b596a893a75d2f18b46
+

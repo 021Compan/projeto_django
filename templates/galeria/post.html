@@ -3,7 +3,7 @@
 {% block content %}
     <main>
         <section class="hero-poust-selecionado">
-            <img src="{% static 'assets/' %}{{post_foto}}" alt="Imagem do post" class="hero-image">
+            <img src="{{ post.foto.url }}" alt="Imagem do post" class="hero-image">
         </section>
         <section class="apresentacao-poust conteudo">
             <h1 class="titulo-poust">{{post.nome}}</h1>

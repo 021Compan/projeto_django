@@ -40,7 +40,7 @@
                             <h2 class="titulo-blog">{{post.titulo}}</h2>
                             <span class="span-blog">{{post.descricao}}</span>
                         </div>
-                        <img src="{% static 'assets/' %}{{post.foto}}" alt="{{post.legenda}}" class="img-blog">
+                        <img src="{{ post.foto.url }}" alt="{{post.legenda}}" class="img-blog">
                     </a>    
                 </article>
             </section>

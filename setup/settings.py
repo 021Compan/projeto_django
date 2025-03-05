@@ -1,5 +1,6 @@
-from pathlib import Path, os
+from pathlib import Path
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
@@ -16,7 +17,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'otercojovem.com.br' ]
 
 
 # Application definition
@@ -107,15 +108,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'setup/static')
+        os.path.join(BASE_DIR, 'static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/static')
 
 MIDEA_URL = '/static/'
+
+#Media
+MEDIA_ROOT = os.path.join(BASE_DIR, 'assets')
+
+MEDIA_URL = '/assets/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
